@@ -1,0 +1,27 @@
+main
+	ADC_Init
+	Compare_Double
+	ADC_Read
+		Delay_22us
+	word2double
+		NRM3232
+			RES032
+			SETFUN32
+			FIXSIGN32
+	InitMain
+		SPI1_Init
+	double2word
+		SETIOV3224
+	DAC_Output
+		SPI1_Write
+	Add_32x32_FP
+		NRM4032
+			RES032
+			SETFUN32
+			FIXSIGN32
+			SETFOV32
+		NRM3232
+			RES032
+			SETFUN32
+			FIXSIGN32
+		SETFOV32
